@@ -90,4 +90,3 @@ const recursiveValidatePrompt = function () {
   });
 };
 recursiveValidatePrompt();
-console.log(numberToGuess)
