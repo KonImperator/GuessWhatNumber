@@ -17,9 +17,7 @@ const levelUp = function () {
   rounds++;
   guessCounter = 0;
   console.log(`Time for round ${rounds}`);
-  rl.question(`Guess the number (0-${rounds * 100}): `, (number) => {
-    recursiveValidatePrompt();
-  });
+  recursiveValidatePrompt();
 };
 // called each time the user guesses the random number correctly - adjusts new variables and reprompts user with the recursive function
 // once guessed correctly, the guessed upper range increases by 100, rounds increment and guess attempts are reset
@@ -55,7 +53,7 @@ const gameOver = function (attempts) {
 
 const attemptedGuess = function () {
   if (guess === numberToGuess) {
-    guessCounter++
+    guessCounter++;
     guessedCorrectly(guessCounter);
   } else if (guess > numberToGuess) {
     console.log("You should guess LOWER :)");
